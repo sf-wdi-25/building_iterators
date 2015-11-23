@@ -40,7 +40,13 @@ BONUS:
 * Create a function `mySome` which implements `Array.prototype.some`
 * Create a function `myEvery` which implements `Array.prototype.every`
 
+## getting started
 
+1. Fork this repo, and clone it into your `dev` folder on your local machine.  Make sure you are in `dev` before cloning.
+
+2. Start at `myEach.js`. There is already some starter code there; begin by filling in the function body.
+
+3. Use the included test suite to help you test your solutions.
 
 ## tests
 
