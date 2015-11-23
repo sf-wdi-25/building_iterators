@@ -145,3 +145,12 @@ Here's another one:
 
 At line 37 in the test file there was an expectation that an array would have the elements
 `['a', 'b', 'c', 'd']`.  But instead it got an empty array.
+
+```
+
+## another way to test/use your code
+
+You can write additional code in `index.js` that uses your code in the other files.
+This is the best place for you to write your own code to use your new functions.  
+
+You'll see that we already `require`d the other files for you.  Don't worry about how this works. Just know that it does and that you can use those functions in `index.js`.
