@@ -1,12 +1,13 @@
 /* write your myMap function body in the function below */
 
 function myMap(arr, callback) {
-
-  //////////////////////////////////
-  //  YOUR CODE HERE
-  //////////////////////////////////
-
-
+	//////////////////////////////////
+	var returnArray = [];
+	for(var i = 0; i < arr.length; i++) {
+		returnArray.push(callback(arr[i]));
+	}
+	return returnArray;
+    //////////////////////////////////
 }
 
 
