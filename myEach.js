@@ -1,12 +1,11 @@
 /* write your myEach function body in the function below */
 
 function myEach(arr, callback) {
-
 //////////////////////////////////
-//  YOUR CODE HERE
+for(var i = 0; i < arr.length; i++) {
+		callback(arr[i]);
+	}
 //////////////////////////////////
-
-
 }
 
 

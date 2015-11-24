@@ -1,20 +1,14 @@
 /* write your myReduce function body in the function below */
 
-function myReduce(arr, callback) {
-
-  //////////////////////////////////
-  //  YOUR CODE HERE
-  //////////////////////////////////
-
-
+function myReduce(arr, callback   {
+	//////////////////////////////////
+	var accum = array[0];
+	for(j = 1; j < array.length; j++) {
+		accum = callback(accum, array[j])
+	}
+return accum;
 }
-
-
-
-
-
-
-
+	 //////////////////////////////////
 
 
 
