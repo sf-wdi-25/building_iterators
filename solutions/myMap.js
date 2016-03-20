@@ -16,6 +16,8 @@ function myMap(arr, callback) {
 
 
 
-
-// export this function (you can ignore this for now)
-module.exports = myMap;
+/* used only in CommonJS environments (e.g. node), skip in browser */
+if (typeof exports !== 'undefined' && this.exports !== exports) {
+  // export this function (STUDENTS: you may ignore this for now)
+  module.exports = myMap;
+}
