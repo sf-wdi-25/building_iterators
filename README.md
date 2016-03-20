@@ -1,9 +1,8 @@
 # Building iterators
 
-
 For the following challenges it is essential that you understand the requirements to fully implement the built-in array method. See [MDN Array Reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)
 
-## reading documentation
+## Reading documentation
 
 Let's take a quick look at what MDN says about [Array.prototype.forEach](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)
 
@@ -21,7 +20,7 @@ It also mentions `thisArg` which **is not an argument to the callback**, rather 
 is an argument to `forEach` itself.  We can also see that `thisArg` is **optional**.
 That means it's not required.  For today's work, we will not use it.
 
-## building our own
+## Building our own
 
 Now we're going to build our own iterators.
 
@@ -40,7 +39,41 @@ BONUS:
 * Create a function `mySome` which implements `Array.prototype.some`
 * Create a function `myEvery` which implements `Array.prototype.every`
 
-## getting started
+### Before you start, review:
+
+Before you start each problem, ask yourself questions such as:
+
+* What are our inputs?
+* What is our output?
+* What happens on each loop?
+* What does the callback function do?
+* What gets passed into our callback function? i.e. what arguments does it receive? (it's inputs)
+  * Where does it come from?
+  * How do we know what to name it?
+
+You should be able to answer most of these questions based on the documentation you just read or by experimenting in the browser developer tools.  
+
+<details><summary>
+For example for `forEach` we know:
+</summary>
+<ul>
+  <li> What are our inputs?
+    <ul>
+      <li> inputs to `forEach`:  `callback` (a function), `thisArg` (an optional argument)</li>
+      <li> inputs to the callback: `currentValue`, `index`, `array`</li>
+    </ul>
+  </li>
+  <li> What is our output?  
+    <ul>
+      <li> output from `forEach`: `undefined` (test this in your browser console)</li>
+      <li> output from the callback: a value (determined by whomever wrote the callback)</li>
+  </li>
+</details>
+<br>
+**Ask yourself similar questions before you start each problem.**
+
+
+## Getting started
 
 1. Fork this repo, and clone it into your `dev` folder on your local machine.  Make sure you are in `dev` before cloning.
 
@@ -48,7 +81,8 @@ BONUS:
 
 3. Use the included test suite to help you test your solutions.
 
-## tests
+
+## Tests
 
 Tests have been provided for you to test your solutions.  At this point don't
 worry about the test code.  You don't even need to read it.  
@@ -56,13 +90,13 @@ Focus on building your solution and just use the tests as a system of hints and
 a way to confirm your solutions.
 
 
-### test setup
+### Test setup
 
 `cd` into this repositories directory.  Then run `npm install`.  (You should *not*
   be in the `test` directory).
 This installs the dependencies and testing framework we need.
 
-### running tests
+### Running tests
 
 Run the tests individually as you work on each challenge.  For example to run
 the tests for myMap, in your terminal:
@@ -107,7 +141,7 @@ $ mocha test/test-myMap.js
 ```
 
 *Also it's important to note that the three passing tests above are actually passing
-only by happenstance.  As soon as you implement a little more of the `myMap` function
+only by **happenstance**.  As soon as you implement a little more of the `myMap` function
 they'll stop passing.  For example `doesn't alter the original array` is passing;
 primarily because an empty function doesn't alter arrays, right?.*  You need to get
 all the tests to pass.
@@ -146,11 +180,12 @@ Here's another one:
 At line 37 in the test file there was an expectation that an array would have the elements
 `['a', 'b', 'c', 'd']`.  But instead it got an empty array.
 
-```
 
-## another way to test/use your code
+
+### Another way to test/use your code
 
 You can write additional code in `index.js` that uses your code in the other files.
 This is the best place for you to write your own code to use your new functions.  
 
-You'll see that we already `require`d the other files for you.  Don't worry about how this works. Just know that it does and that you can use those functions in `index.js`.
+You'll see that we already `require`d the other files for you.  
+Don't worry about how this works. Just know that it does and that you can use those functions in `index.js`.
