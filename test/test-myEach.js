@@ -3,16 +3,18 @@
  * To run these tests do `mocha spec/test-myEach.js`
 */
 
-var mocha = require('mocha');
-var chai = require('chai');
-var spies = require('chai-spies');
-chai.use(spies);
+/* used only in CommonJS environments (e.g. node), skip in browser */
+if (typeof exports !== 'undefined' && this.exports !== exports) {
+  var mocha = require('mocha');
+  var chai = require('chai');
+  var spies = require('chai-spies');
+  var myEach = require('../myEach');
+  chai.use(spies);
+}
 
 var expect = chai.expect;
 chai.config.includeStack = false; // turn off stack trace
 chai.config.showDiff = true; // turn on reporter diff display
-
-var myEach = require('../myEach');
 
 describe('myEach', function() {
   // sample data
